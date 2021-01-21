@@ -11,6 +11,7 @@ import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeNotNull;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.Plugin;
 import org.junit.After;
@@ -161,6 +162,16 @@ public class MockBukkitTest
 		Plugin[] plugins = MockBukkit.getMock().getPluginManager().getPlugins();
 		assertThat(plugins.length, equalTo(1));
 		assertThat(plugins[0].getName(), equalTo("TestPlugin"));
+	}
+	
+	@Test
+	public void load_PluginWithConfigFile_ConfigFileParsed()
+	{
+		MockBukkit.mock();
+		TestPlugin plugin = MockBukkit.load(TestPlugin.class);
+		FileConfiguration config = plugin.getConfig();
+		String value = config.getString("foo");
+		assertThat(value, equalTo("bar"));
 	}
 
 	public static class CustomServerMock extends ServerMock
