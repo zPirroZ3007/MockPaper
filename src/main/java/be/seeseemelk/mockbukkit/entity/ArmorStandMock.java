@@ -14,6 +14,8 @@ import org.bukkit.util.EulerAngle;
 
 import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.UnimplementedOperationException;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This is the mock of an {@link ArmorStand}.
@@ -281,6 +283,83 @@ public class ArmorStandMock extends LivingEntityMock implements ArmorStand
 	public boolean hasEquipmentLock(EquipmentSlot slot, LockType lockType)
 	{
 		// TODO Equipment Locks use byte operations internally, they might be hard to implement
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean canMove()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void setCanMove(boolean move)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean canTick()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void setCanTick(boolean tick)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull ItemStack getItem(@NotNull EquipmentSlot slot)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void setItem(@NotNull EquipmentSlot slot, @Nullable ItemStack item)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull Set<EquipmentSlot> getDisabledSlots()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void setDisabledSlots(@NotNull EquipmentSlot... slots)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void addDisabledSlots(@NotNull EquipmentSlot... slots)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void removeDisabledSlots(@NotNull EquipmentSlot... slots)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean isSlotDisabled(@NotNull EquipmentSlot slot)
+	{
+		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
 	}
 

@@ -80,6 +80,13 @@ public class BarrelMock extends ContainerMock implements Barrel
 	}
 
 	@Override
+	public boolean isOpen()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
 	protected InventoryMock createInventory()
 	{
 		return new BarrelInventoryMock(this);

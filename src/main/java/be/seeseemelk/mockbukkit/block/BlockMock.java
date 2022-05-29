@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 import java.util.Collection;
 import java.util.List;
 
+import com.destroystokyo.paper.block.BlockSoundGroup;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Chunk;
 import org.bukkit.FluidCollisionMode;
@@ -202,6 +203,13 @@ public class BlockMock implements Block
 	}
 
 	@Override
+	public boolean isValidTool(@NotNull ItemStack itemStack)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
 	public Location getLocation()
 	{
 		return location;
@@ -247,6 +255,13 @@ public class BlockMock implements Block
 		// This will always return a snapshot of the BlockState, not the actual state.
 		// This is optional with Paper but for Spigot it simply works like that.
 		return state.getSnapshot();
+	}
+
+	@Override
+	public @NotNull BlockState getState(boolean useSnapshot)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override
@@ -321,6 +336,34 @@ public class BlockMock implements Block
 	}
 
 	@Override
+	public boolean isBuildable()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean isBurnable()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean isReplaceable()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean isSolid()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
 	public double getTemperature()
 	{
 		// TODO Auto-generated method stub
@@ -356,6 +399,13 @@ public class BlockMock implements Block
 	public boolean breakNaturally(ItemStack tool)
 	{
 		return this.breakNaturally();
+	}
+
+	@Override
+	public boolean breakNaturally(@NotNull ItemStack tool, boolean triggerEffect)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override
@@ -408,6 +458,27 @@ public class BlockMock implements Block
 
 	@Override
 	public BoundingBox getBoundingBox()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull BlockSoundGroup getSoundGroup()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull String getTranslationKey()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull float getDestroySpeed(@NotNull ItemStack itemStack, boolean considerEnchants)
 	{
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();

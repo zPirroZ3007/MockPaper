@@ -126,7 +126,7 @@ public class MockBukkit
 		{
 			loadJar(new File(path));
 		}
-		catch (InvalidPluginException e)
+		catch (InvalidPluginException | InvalidDescriptionException e)
 		{
 			// We *really* don't want to bother users with this error.
 			// It's only supposed to be used during unit tests, so if
@@ -143,10 +143,9 @@ public class MockBukkit
 	 */
 	@SuppressWarnings(
 	{ "deprecation" })
-	public static void loadJar(File jarFile) throws InvalidPluginException
+	public static void loadJar(File jarFile) throws InvalidPluginException, InvalidDescriptionException
 	{
-		JavaPluginLoader loader = new JavaPluginLoader(mock);
-		Plugin plugin = loader.loadPlugin(jarFile);
+		Plugin plugin = mock.getPluginManager().loadPlugin(jarFile);
 		mock.getPluginManager().registerLoadedPlugin(plugin);
 		mock.getPluginManager().enablePlugin(plugin);
 	}

@@ -717,6 +717,13 @@ public class PluginManagerMock implements PluginManager
 	}
 
 	@Override
+	public void disablePlugin(@NotNull Plugin plugin, boolean closeClassloader)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
 	public Permission getPermission(@NotNull String name)
 	{
 		return permissions.stream().filter(permission -> permission.getName().equals(name)).findFirst().orElse(null);

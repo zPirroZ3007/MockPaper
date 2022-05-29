@@ -5,6 +5,7 @@ import be.seeseemelk.mockbukkit.UnimplementedOperationException;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Monster;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 import java.util.UUID;
@@ -56,5 +57,11 @@ public abstract class MonsterMock extends CreatureMock implements Monster
 	{
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void assertSaid(@NotNull String expected)
+	{
+		super.assertSaid(expected);
 	}
 }

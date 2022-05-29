@@ -234,6 +234,13 @@ public class InventoryMock implements Inventory
 	}
 
 	@Override
+	public @Nullable InventoryHolder getHolder(boolean useSnapshot)
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
 	public ListIterator<ItemStack> iterator()
 	{
 		List<ItemStack> list = Arrays.asList(items).stream().filter(Objects::nonNull).collect(Collectors.toList());
@@ -262,6 +269,13 @@ public class InventoryMock implements Inventory
 
 	@Override
 	public HashMap<Integer, ItemStack> removeItem(ItemStack... items) throws IllegalArgumentException
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @NotNull HashMap<Integer, ItemStack> removeItemAnySlot(@NotNull ItemStack... items) throws IllegalArgumentException
 	{
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
@@ -390,6 +404,13 @@ public class InventoryMock implements Inventory
 	public void clear()
 	{
 		Arrays.fill(items, null);
+	}
+
+	@Override
+	public int close()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override

@@ -51,4 +51,15 @@ public abstract class ProjectileMock extends EntityMock implements Projectile
 		this.bounce = doesBounce;
 	}
 
+	@Override
+	public void assertSaid(@NotNull String expected)
+	{
+		super.assertSaid(expected);
+	}
+
+	@Override
+	public void assertNoMoreSaid()
+	{
+		super.assertNoMoreSaid();
+	}
 }

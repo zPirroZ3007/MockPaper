@@ -65,7 +65,7 @@ class UnsafeValuesTest
 	@Test
 	void checkSupported_unsupportedVersion() throws InvalidPluginException
 	{
-		assertThrows(InvalidPluginException.class, () -> checkVersion("1.8"));
+		assertThrows(InvalidPluginException.class, () -> checkVersion("11"));
 	}
 
 	@Test

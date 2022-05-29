@@ -6,12 +6,14 @@ import org.apache.commons.lang.Validate;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.jetbrains.annotations.NotNull;
 
 import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.UnimplementedOperationException;
 import be.seeseemelk.mockbukkit.inventory.meta.FireworkMetaMock;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This is a simple mock of the {@link Firework} {@link Entity}. It takes a {@link FireworkMeta} to carry all
@@ -74,6 +76,20 @@ public class FireworkMock extends ProjectileMock implements Firework
 	public void setShotAtAngle(boolean shotAtAngle)
 	{
 		this.shotAtAngle = shotAtAngle;
+	}
+
+	@Override
+	public @Nullable UUID getSpawningEntity()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public @Nullable LivingEntity getBoostedEntity()
+	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 }
